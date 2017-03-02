@@ -47,6 +47,7 @@ public class Main extends ApplicationAdapter implements InputProcessor{
 
 	@Override
 	public boolean keyUp(int keycode) {
+		requestHandler.showOrLoadInterstital();
 		return false;
 	}
 
