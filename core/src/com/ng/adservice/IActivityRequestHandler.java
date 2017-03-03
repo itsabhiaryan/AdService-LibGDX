@@ -9,6 +9,7 @@ package com.ng.adservice;
 public interface IActivityRequestHandler {
 
     void showBannerAds(boolean isTop,boolean isBottom);
-    void showOrLoadInterstital();
+    void showOrLoadInterstitial();
+    boolean showVideoAd(boolean isRewarded);
 
 }

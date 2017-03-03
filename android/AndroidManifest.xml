@@ -24,6 +24,18 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+
+        <!-- Revmob Interestial Ad activity  -->
+
+        <activity
+                android:name="com.revmob.FullscreenActivity"
+                android:theme="@android:style/Theme.Translucent"
+                android:configChanges="keyboardHidden|orientation">
+        </activity>
+
+
     </application>
 
 </manifest>

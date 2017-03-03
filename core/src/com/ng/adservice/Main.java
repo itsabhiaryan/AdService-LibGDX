@@ -47,7 +47,9 @@ public class Main extends ApplicationAdapter implements InputProcessor{
 
 	@Override
 	public boolean keyUp(int keycode) {
-		requestHandler.showOrLoadInterstital();
+		//requestHandler.showOrLoadInterstitial();
+
+		requestHandler.showVideoAd(false);
 		return false;
 	}
 

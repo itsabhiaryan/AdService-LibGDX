@@ -18,7 +18,7 @@ import com.google.android.gms.ads.*;
  * @author Abhishek Aryan
  * @since 02-03-2017.
  */
-public class AdMob {
+public class AdMobHelper implements Ad{
 
     private Activity activity;
     private AdView topView,bottomView;
@@ -66,10 +66,10 @@ public class AdMob {
         }
     };
 
-    public AdMob(Activity activity){
+    public AdMobHelper(Activity activity){
         this.activity=activity;
 
-        // Create and setup the AdMob view
+        // Create and setup the AdMobHelper view
         topView = new AdView(activity);
         topView.setAdSize(AdSize.BANNER);
         topView.setAdUnitId(TopAdUnitId);
@@ -117,7 +117,7 @@ public class AdMob {
 
     public void embedView(RelativeLayout layout){
 
-        // Add the AdMob view
+        // Add the AdMobHelper view
         RelativeLayout.LayoutParams topParams = new RelativeLayout.LayoutParams(RelativeLayout.LayoutParams.MATCH_PARENT, RelativeLayout.LayoutParams.WRAP_CONTENT);
         topParams.addRule(RelativeLayout.ALIGN_PARENT_TOP,RelativeLayout.TRUE);
         topParams.addRule(RelativeLayout.CENTER_HORIZONTAL, RelativeLayout.TRUE);
@@ -132,21 +132,25 @@ public class AdMob {
         bottomView.setBackgroundColor(Color.BLACK);
     }
 
+    @Override
     public void resume(){
         if (topView != null) topView.resume();
         if (bottomView != null) bottomView.resume();
     }
 
+    @Override
     public void pause(){
         if (topView != null) topView.pause();
         if (bottomView != null) bottomView.pause();
     }
 
+    @Override
     public void destroy(){
         if (topView != null)topView.destroy();
         if (bottomView != null) bottomView.destroy();
     }
 
+    @Override
     public void showAd(boolean isTop,boolean isBottom){
 
         if(isBottom && isTop)
@@ -160,7 +164,7 @@ public class AdMob {
     }
 
 
-    public void showOrLoadInterstital() {
+    public void showOrLoadInterstitial() {
             try {
                   activity.runOnUiThread(new Runnable() {
                         public void run() {
@@ -177,5 +181,10 @@ public class AdMob {
                   });
                 } catch (Exception e) {
                 }
+    }
+
+    @Override
+    public boolean showVideoAd(boolean isReward) {
+        return false;
     }
 }
