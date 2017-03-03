@@ -17,3 +17,13 @@ dependencies {
 
 minSdkVersion >= 9
 ```
+
+
+# RevMob Integration
+
+- Get Media Id after signup to RevMob
+- Download SDK(basically revmob.jar)
+- Add .jar file into your IDE and integrate/compile
+- Add com.revmob.FullscreenActivity into Manifest file for Interstitial or Video Ad
+
+
