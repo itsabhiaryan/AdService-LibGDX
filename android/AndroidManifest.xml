@@ -40,12 +40,22 @@
                 android:configChanges="keyboardHidden|orientation">
         </activity>
 
-        <!-- Revmob Interestial Ad activity  -->
+        <!-- Revmob Interstitial Ad activity  -->
         <activity android:name="com.chartboost.sdk.CBImpressionActivity"
                   android:excludeFromRecents="true"
                   android:hardwareAccelerated="true"
                   android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
                   android:configChanges="keyboardHidden|orientation|screenSize" />
+
+        <!-- AdColony Interstitial Ad activity  -->
+        <activity android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:hardwareAccelerated="true"/>
+
+        <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+                  android:configChanges="keyboardHidden|orientation|screenSize"
+                  android:hardwareAccelerated="true"/>
+
     </application>
 
 </manifest>

@@ -20,7 +20,7 @@ android {
     }
     defaultConfig {
         applicationId "com.ng.adservice"
-        minSdkVersion 9
+        minSdkVersion 14
         targetSdkVersion 24
     }
 }

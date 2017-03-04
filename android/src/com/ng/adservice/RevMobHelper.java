@@ -243,13 +243,13 @@ public class RevMobHelper implements Ad {
             @Override
             public void onRevMobRewardedVideoCompleted() {
                 Log.i("RevMob", "Rewarded Video completed. You earned a coin!");
-                //User dismissed post-roll static ad
+                //User dismissed post-roll static adHelper
                 loadRewardedVideo();
             }
             @Override
             public void onRevMobAdClicked() {
                 Log.i("RevMob", "Rewarded Video clicked. You earned a coin!");
-                //User clicked on post-roll static ad
+                //User clicked on post-roll static adHelper
             }
 
             @Override
@@ -299,7 +299,7 @@ public class RevMobHelper implements Ad {
     @Override
     public void showOrLoadInterstitial() {
         if(fullscreenIsLoaded) {
-            fullscreen.show(); // call it wherever you want to show the fullscreen ad
+            fullscreen.show(); // call it wherever you want to show the fullscreen adHelper
         } else {
             loadFullscreen();
             Log.i("RevMob", "Ad not loaded yet.");

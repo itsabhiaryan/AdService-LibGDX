@@ -30,6 +30,7 @@ allprojects {
         mavenCentral()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
+        maven { url "https://adcolony.bintray.com/AdColony" }
     }
 }
 
@@ -48,6 +49,8 @@ project(":android") {
         natives "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-x86_64"
 
         compile 'com.google.android.gms:play-services-ads:10.0.1'
+        compile 'com.adcolony:sdk:3.0.7'
+        compile 'com.android.support:support-annotations:25.0.1'
 
     }
 }
