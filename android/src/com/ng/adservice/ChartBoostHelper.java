@@ -13,15 +13,15 @@ import com.chartboost.sdk.Chartboost;
  * @since 03-03-2017.
  */
 
-  /* Chartboost does not support banner ads. You can use Static Interstitial and Video Interstitial Ad.*/
+  /* ChartBoost does not support banner ads. You can use Static Interstitial and Video Interstitial Ad.*/
 
-public class ChartboostHelper implements Ad {
+public class ChartBoostHelper implements Ad {
 
     private Activity activity;
-    private static final String appId="XX";
-    private static final String appSignature="XXX";
+    private static final String appId="xxxxx";
+    private static final String appSignature="xxxxxxxxxx";
 
-    public ChartboostHelper(Activity activity){
+    public ChartBoostHelper(Activity activity){
 
         this.activity=activity;
         Chartboost.startWithAppId(activity, appId, appSignature);
@@ -46,11 +46,8 @@ public class ChartboostHelper implements Ad {
     @Override
     public void showOrLoadInterstitial() {
 
-        Log.i("Chartboost","show or Load interstitial out");
-
         if(Chartboost.hasInterstitial(CBLocation.LOCATION_DEFAULT)) {
             Chartboost.showInterstitial(CBLocation.LOCATION_DEFAULT);
-            Log.i("Chartboost","show or Load interstitial");
         }
         else
             loadInterstitial();
@@ -62,10 +59,9 @@ public class ChartboostHelper implements Ad {
 
     @Override
     public boolean showVideoAd(boolean isReward) {
-        Log.i("Chartboost","show or Load video out");
+
         if(Chartboost.hasRewardedVideo(CBLocation.LOCATION_GAMEOVER)) {
             Chartboost.showRewardedVideo(CBLocation.LOCATION_GAMEOVER);
-            Log.i("Chartboost","show or Load video");
         }
         else
             loadVideoAd();
@@ -96,4 +92,7 @@ public class ChartboostHelper implements Ad {
     public void resume() {
         Chartboost.onResume(activity);
     }
+
+
+
 }
