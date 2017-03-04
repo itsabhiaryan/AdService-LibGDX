@@ -17,7 +17,8 @@ public interface Ad {
     boolean showVideoAd(boolean isReward);
 
     void destroy();
-
+    void start();
+    void stop();
     void pause();
 
     void resume();

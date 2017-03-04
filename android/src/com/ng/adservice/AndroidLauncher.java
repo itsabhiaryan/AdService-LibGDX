@@ -29,7 +29,7 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 		gameView.setLayoutParams(gameViewParams);
 		layout.addView(gameView);
 
-		ad=new RevMobHelper(this);
+		ad=new ChartboostHelper(this);
 		ad.embedView(layout);
 
 		setContentView(layout);
@@ -56,6 +56,18 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 	}
 
 	@Override
+	protected void onStart() {
+		super.onStart();
+		ad.start();
+	}
+
+	@Override
+	protected void onStop() {
+		super.onStop();
+		ad.stop();
+	}
+
+	@Override
 	public void showBannerAds(boolean isTop,boolean isBottom) {
          ad.showAd(isTop,isBottom);
 	}
@@ -64,7 +76,6 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 	public void showOrLoadInterstitial() {
 		ad.showOrLoadInterstitial();
 	}
-
 
 	@Override
 	public boolean showVideoAd(boolean isRewarded) {

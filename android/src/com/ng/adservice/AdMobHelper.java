@@ -151,6 +151,16 @@ public class AdMobHelper implements Ad{
     }
 
     @Override
+    public void start() {
+
+    }
+
+    @Override
+    public void stop() {
+
+    }
+
+    @Override
     public void showAd(boolean isTop,boolean isBottom){
 
         if(isBottom && isTop)
