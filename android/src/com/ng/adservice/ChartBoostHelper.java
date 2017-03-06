@@ -5,6 +5,7 @@ import android.util.Log;
 import android.widget.RelativeLayout;
 import com.chartboost.sdk.CBLocation;
 import com.chartboost.sdk.Chartboost;
+import com.chartboost.sdk.ChartboostDelegate;
 
 /**
  * (c) 2010 Abhishek Aryan
@@ -26,6 +27,7 @@ public class ChartBoostHelper implements Ad {
         this.activity=activity;
         Chartboost.startWithAppId(activity, appId, appSignature);
         Chartboost.onCreate(activity);
+        Chartboost.setDelegate(new Delegate(this));
     }
 
 
@@ -93,6 +95,18 @@ public class ChartBoostHelper implements Ad {
         Chartboost.onResume(activity);
     }
 
+
+    class Delegate extends ChartboostDelegate {
+
+        private ChartBoostHelper helper;
+
+        public Delegate(ChartBoostHelper helper){
+            this.helper=helper;
+        }
+
+
+
+    }
 
 
 }

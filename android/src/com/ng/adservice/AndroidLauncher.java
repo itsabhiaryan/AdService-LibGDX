@@ -2,6 +2,7 @@ package com.ng.adservice;
 
 import android.os.Bundle;
 
+import android.transition.ChangeTransform;
 import android.view.View;
 import android.widget.RelativeLayout;
 import com.badlogic.gdx.backends.android.AndroidApplication;
@@ -29,12 +30,25 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 		gameView.setLayoutParams(gameViewParams);
 		layout.addView(gameView);
 
-		ad=new AdColonyHelper(this);
+		ad=new StartAppHelper(this);
 		ad.embedView(layout);
 
 		setContentView(layout);
 	}
 
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+		super.onSaveInstanceState(outState);
+		if(ad instanceof StartAppHelper)
+		((StartAppHelper)ad).saveInstanceState(outState);
+	}
+
+	@Override
+	protected void onRestoreInstanceState(Bundle savedInstanceState) {
+		if(ad instanceof StartAppHelper)
+		((StartAppHelper)ad).restoreInstanceState(savedInstanceState);
+		super.onRestoreInstanceState(savedInstanceState);
+	}
 
 	@Override
 	protected void onResume() {
