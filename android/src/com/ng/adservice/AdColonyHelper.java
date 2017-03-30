@@ -2,6 +2,7 @@ package com.ng.adservice;
 
 import android.app.Activity;
 import android.graphics.Color;
+import android.text.style.TtsSpan;
 import android.widget.RelativeLayout;
 import com.adcolony.sdk.*;
 import com.badlogic.gdx.ApplicationListener;
@@ -24,7 +25,6 @@ public class AdColonyHelper implements Ad {
     public AdColonyHelper(Activity activity){
 
         this.activity=activity;
-
 
         AdColony.configure(activity, APP_ID, ZONE_IDS);
         //loadNativeAd();
