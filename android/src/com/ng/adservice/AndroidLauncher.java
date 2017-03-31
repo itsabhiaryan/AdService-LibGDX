@@ -30,7 +30,7 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 		gameView.setLayoutParams(gameViewParams);
 		layout.addView(gameView);
 
-		ad=new StartAppHelper(this);
+		ad=new AdMobFirebaseHelper(this);
 		ad.embedView(layout);
 
 		setContentView(layout);

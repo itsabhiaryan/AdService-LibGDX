@@ -4,8 +4,6 @@
     android:versionCode="1"
     android:versionName="1.0" >
 
-    <uses-sdk android:minSdkVersion="8" android:targetSdkVersion="24" />
-
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -39,7 +37,18 @@
             </intent-filter>
         </activity>
 
-        <!-- Revmob Interestial Ad activity  -->
+
+        <!-- AdMob Interestitial Ad activity -->
+
+        <meta-data android:name="com.google.android.gms.version"
+                   android:value="@integer/google_play_services_version" />
+
+        <activity android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+            android:theme="@android:style/Theme.Translucent" />
+
+
+        <!-- Revmob Interestitial Ad activity  -->
         <activity
                 android:name="com.revmob.FullscreenActivity"
                 android:theme="@android:style/Theme.Translucent"
