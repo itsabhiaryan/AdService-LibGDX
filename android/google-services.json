@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:814449994775:android:bd763ba9f1ec8fed",
+        "mobilesdk_app_id": "1:814449994775:android:c5077736cd64ac29",
         "android_client_info": {
-          "package_name": "com.ng.adservice"
+          "package_name": "com.its.adservice"
         }
       },
       "oauth_client": [

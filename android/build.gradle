@@ -19,7 +19,7 @@ android {
         exclude 'META-INF/robovm/ios/robovm.xml'
     }
     defaultConfig {
-        applicationId "com.ng.adservice"
+        applicationId "com.its.adservice"
         minSdkVersion 14
         targetSdkVersion 25
     }
@@ -72,7 +72,7 @@ task run(type: Exec) {
     }
 
     def adb = path + "/platform-tools/adb"
-    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.ng.adservice/com.ng.adservice.AndroidLauncher'
+    commandLine "$adb", 'shell', 'am', 'start', '-n', 'com.its.adservice/AndroidLauncher'
 }
 
 // sets up the Android Eclipse project, using the old Ant based build.

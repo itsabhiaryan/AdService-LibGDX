@@ -1,4 +1,4 @@
-package com.ng.adservice;
+package com.its.adservice;
 
 import org.robovm.apple.foundation.NSAutoreleasePool;
 import org.robovm.apple.uikit.UIApplication;
@@ -10,7 +10,7 @@ public class IOSLauncher extends IOSApplication.Delegate {
     @Override
     protected IOSApplication createApplication() {
         IOSApplicationConfiguration config = new IOSApplicationConfiguration();
-        return new IOSApplication(new Main(), config);
+        return new IOSApplication(new com.its.adservice.Main(), config);
     }
 
     public static void main(String[] argv) {
