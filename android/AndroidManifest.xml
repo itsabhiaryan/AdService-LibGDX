@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.its.adservice"
     android:versionCode="1"
-    android:versionName="1.0" >
+    android:versionName="1.0">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,6 +20,16 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.BLUETOOTH" />
+
+    <!-- InMobi permission  -->
+
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="com.google.android.gms.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.READ_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_CALENDAR"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 
     <application
@@ -55,6 +66,8 @@
                 android:configChanges="keyboardHidden|orientation">
         </activity>
 
+
+
         <!-- Chartboost Interstitial Ad activity  -->
         <activity android:name="com.chartboost.sdk.CBImpressionActivity"
                   android:excludeFromRecents="true"
@@ -70,6 +83,30 @@
         <activity android:name="com.adcolony.sdk.AdColonyAdViewActivity"
                   android:configChanges="keyboardHidden|orientation|screenSize"
                   android:hardwareAccelerated="true"/>
+
+
+        <!-- InMobi Interstitial Ad activity  -->
+        <activity
+            android:name="com.inmobi.rendering.InMobiAdActivity"
+            android:configChanges="keyboardHidden|orientation|keyboard|smallestScreenSize|screenSize|screenLayout"
+            android:hardwareAccelerated="true"
+            android:resizeableActivity="false"
+            android:theme="@android:style/Theme.NoTitleBar"
+            tools:ignore="UnusedAttribute"/>
+
+        <receiver
+            android:name="com.inmobi.commons.core.utilities.uid.ImIdShareBroadCastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            tools:ignore="ExportedReceiver">
+            <intent-filter>
+                <action android:name="com.inmobi.share.id"/>
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.inmobi.signals.activityrecognition.ActivityRecognitionManager"
+            android:enabled="true"/>
 
         <!-- StartApp Interstitial Ad activity  -->
         <activity android:name="com.startapp.android.publish.ads.list3d.List3DActivity"

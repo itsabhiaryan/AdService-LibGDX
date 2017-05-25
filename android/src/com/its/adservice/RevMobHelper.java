@@ -255,7 +255,7 @@ public class RevMobHelper implements Ad {
             @Override
             public void onRevMobRewardedVideoFinished() {
                 Log.i("RevMob", "RevMob Rewarded Video finished playing.");
-                //The video itself reached its end
+                //The videoAd itself reached its end
                 loadRewardedVideo();
             }
 

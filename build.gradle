@@ -29,6 +29,7 @@ allprojects {
     repositories {
         mavenLocal()
         mavenCentral()
+        jcenter()
         maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
         maven { url "https://oss.sonatype.org/content/repositories/releases/" }
         maven { url "https://adcolony.bintray.com/AdColony" }

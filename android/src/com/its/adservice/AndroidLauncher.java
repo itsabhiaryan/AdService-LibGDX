@@ -7,10 +7,12 @@ import android.widget.RelativeLayout;
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
 
-public class AndroidLauncher extends AndroidApplication implements IActivityRequestHandler {
+public class AndroidLauncher extends AndroidApplication implements IActivityRequestHandler{
 
 	private Ad ad;
 	public RelativeLayout layout;
+
+	View gameView;
 
 	@Override
 	protected void onCreate (Bundle savedInstanceState) {
@@ -29,7 +31,7 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 		gameView.setLayoutParams(gameViewParams);
 		layout.addView(gameView);
 
-		ad=new AdMobFirebaseHelper(this);
+		ad=new InMobiHelper(this);
 		ad.embedView(layout);
 
 		setContentView(layout);
@@ -95,4 +97,5 @@ public class AndroidLauncher extends AndroidApplication implements IActivityRequ
 
 		return ad.showVideoAd(isRewarded);
 	}
+
 }

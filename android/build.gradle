@@ -20,8 +20,9 @@ android {
     }
     defaultConfig {
         applicationId "com.its.adservice"
-        minSdkVersion 14
+        minSdkVersion 15
         targetSdkVersion 25
+        multiDexEnabled true // add this to enable multi-dex
     }
 }
 
@@ -139,8 +140,15 @@ dependencies {
     compile 'com.google.android.gms:play-services-ads:10.2.1'
 
     compile 'com.adcolony:sdk:3.0.7'
-    compile 'com.android.support:support-annotations:25.3.1'
 
+    //InMobi
+    compile 'com.inmobi.monetization:inmobi-ads:6.2.0'
+    compile 'com.squareup.picasso:picasso:2.5.2'
+    compile 'com.android.support:multidex:1.0.1'
+    compile 'com.android.support:appcompat-v7:25.0.0'
+    compile 'com.android.support:recyclerview-v7:25.0.0'
+
+    compile 'com.android.support:support-annotations:25.3.1'
 }
 
 apply plugin: 'com.google.gms.google-services'
