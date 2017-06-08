@@ -102,10 +102,5 @@ public class ChartBoostHelper implements Ad {
         public Delegate(ChartBoostHelper helper){
             this.helper=helper;
         }
-
-
-
     }
-
-
 }

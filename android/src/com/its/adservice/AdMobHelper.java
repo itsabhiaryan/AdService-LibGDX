@@ -27,7 +27,7 @@ import com.google.android.gms.ads.*;
 
     private static final String TopAdUnitId="ca-app-pub-xxxxxxxxxxxxxxxxxxxxx";
     private static final String BottomAdUnitId="ca-app-pub-xxxxxxxxxxxxxxxxxxxxx";
-    private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-3940256099942544/1033173712";
+    private static final String AD_UNIT_ID_INTERSTITIAL = "ca-app-pub-XXXXX/XXXXX";
 
     private final int SHOW_TOP_ADS = 0;
     private final int SHOW_BOTTOM_ADS = 1;

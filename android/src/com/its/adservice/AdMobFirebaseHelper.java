@@ -18,8 +18,8 @@ import com.google.android.gms.ads.reward.RewardedVideoAdListener;
 
 public class AdMobFirebaseHelper extends AdMobHelper implements RewardedVideoAdListener {
 
-    private static final String APP_ID="ca-app-pub-3940256099942544~3347511713";
-    private static final String AD_UNIT_ID="ca-app-pub-3940256099942544/5224354917";
+    private static final String APP_ID="ca-app-pub-XXXXX~XXXXX";
+    private static final String AD_UNIT_ID="ca-app-pub-XXXXX/XXXXX";
     private RewardedVideoAd mAd;
     private boolean isRewardShown;
 
